@@ -1,0 +1,61 @@
+README
+=======================================
+
+Thank you for your interest in Simbad !
+
+Simbad is a Robot 3d simulator for scientific and educationnal purposes.
+It is voluntarily kept simple and readable to enable a programmer to design its own robot behavior and environment.
+
+To contact the authors: 
+Louis Hugues: 		sioulseuguh@users.sourceforge.net   
+Nicolas Bredeche :  nemonik@users.sourceforge.net
+ 
+
+
+REQUIREMENTS:
+=======================================
+ 
+It is based solely on Java (>= 1.4.2) and Java3D.
+
+
+=======================================
+DISTRIBUTION CONTENT :
+
++ src/simbad directory   : the  source of Simbad simulator.
++ src/contrib directory  : contributed components to Simbad.
++ src/examples directory : examples you can use as starting point
++ doc/api directory      : javadoc  files.
++ lib directory          : the place where jar files are stored.
++ python directory       : python example scripts for simbad.
++ build.xml file         : the ant build file.
+
+
+======================================
+HOW TO USE DEMO:
+
+You must have installed Java3D.
+
+Launch the demo application :
+    java -jar lib/simbad.jar  
+
+or:
+    java -cp lib/simbad.jar simbad.gui.Simbad
+
+
+======================================
+HOW TO USE PYTHON EXAMPLES:
+
+You need first to install jython (www.jython.org) and add lib/simbad.jar to your CLASSPATH.
+Run:
+    jython python/simple_plan.py
+
+
+======================================
+HOW TO BUILD  :
+
+Simbad distribution comes directly with compiled jar file and does not need compilation.
+However if you modify the source you can recompile with ant tool: 
+    ant clean
+    ant dist
+
+======================================

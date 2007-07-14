@@ -1,0 +1,72 @@
+<project name="Simbad" default="dist" basedir=".">
+  <description>
+        Simbad Robot Simulator 
+
+        Available Targets:
+             ant dist   
+             ant javadoc
+             ant clean
+             ant all
+  </description> 
+  <property name="src" location="src" />
+  <property name="build" location="build"/>
+  <property name="dist"  location="lib"/>
+  <property name="doc"  location="doc/api"/>
+ 
+
+  <target name="init">
+    <tstamp/>
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="simbad" depends="init"   description="compilation of simbad package" >
+    <javac srcdir="${src}/simbad" destdir="${build}"/>
+  </target>
+
+  <target name="examples" depends="init"   description="compilation of examples package" >
+    <javac srcdir="${src}/examples" destdir="${build}"/>
+  </target>
+
+ <target name="contribs" depends="init"   description="compilation of contributed packages" >
+    <javac srcdir="${src}/contribs" destdir="${build}"  /> 
+  </target>
+
+ 
+  <target  name="dist" depends="simbad"  description="generate the distribution" >
+    <mkdir dir="${dist}"/>
+    <jar jarfile="${dist}/simbad.jar">
+        <fileset dir="${build}">
+				<include name="simbad/**/*.class" />
+		</fileset>
+         <manifest>
+            <attribute name="Main-Class" value="simbad.gui.Simbad" />
+         </manifest>
+    </jar>
+  </target>
+
+  
+
+  <target name="javadoc_simbad" depends="init">
+    <javadoc destdir="${doc}" author="true" version="true" use="true" windowtitle="simbad">
+      <fileset dir="${src}/simbad" defaultexcludes="yes">
+     
+      </fileset>
+    </javadoc>
+  </target>
+
+    
+
+  
+    
+
+  <target name="clean"    description="clean up" >
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+    <delete dir="${doc}"/>
+  </target>
+
+  <target name="javadoc" depends="javadoc_simbad">  </target>
+
+  <target name="all" depends="dist,javadoc,examples,contribs">  </target>
+ 
+</project>

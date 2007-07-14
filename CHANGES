@@ -1,0 +1,36 @@
+=======================================
+CHANGES
+=======================================
+Date: 30 December 2006
+
+
+
+CHANGES IN RELEASE 1.4 :
+------------------------
+
+
+New Features: 
++ Python support via jython.
++ PicoEvo and PicoNode (see below).
++ Contrib directory containing contributed software to Simbad.
++ Ant file.
++ Refactoring of distribution.
+
+Bug  fixes:
++ BUFFIX Louis 01/10/2006  getQuadrant functions.
++ BUGFIX Louis 30/12/2006  force udpate of sensor immediately after a reset.
++ BUGFIX Louis 30/12/2006  now range sensor belt returns infinity or MaxRange(default) if no obstacle. 
+
+
+Evolutionnary Robotic with PicoEvo and PicoNode:
+------------------------------------------------
+Simbad now comes with two associated packages PicoEvo and PicoNode. These packages can be dowloaded separately  from sourceforge (http://sourceforge.net/projects/simbad/files ).
+
+If you are interested in Evolutionnary Robotics you should take a look two those tools working in association with Simbad.
+Thanks to Nicolas Bredeche for these useful tools.
+
+
+
+
+
+=======================================
