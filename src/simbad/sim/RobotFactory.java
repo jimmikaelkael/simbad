@@ -184,7 +184,33 @@ public class RobotFactory extends Factory {
                 "left");
     }
 
-    
+    /**
+     * Adds a prebuild line sensor to the agent.
+     * @param agent
+     * @return the sensor object
+     */
+    static public LineSensor addLineSensor(Agent agent) {
+    	return addLineSensor(agent, 5);
+    }
+    /**
+     * Adds a prebuild line sensor to the agent. Specify the number of sensors.
+     * @param agent
+     * @param nbSensors
+     * @return the sensor object
+     */    
+    static public LineSensor addLineSensor(Agent agent, int nbSensors) {
+        double agentHeight = agent.getHeight();
+        double agentRadius = agent.getRadius();
+        LineSensor lineSensor = new LineSensor((float) agentRadius+0.001f,
+                0f, 0.025f, nbSensors, LineSensor.FLAG_SHOW_FULL_SENSOR_RAY);
+        lineSensor.setUpdatePerSecond(20);
+        lineSensor.setName("line sensor");
+        Vector3d pos = new Vector3d(0, -(agentHeight / 2) + 0.025f, 0.0);
+        agent.addSensorDevice(lineSensor, pos, 0);
+        return lineSensor;	
+    }    
+
+
     
     /**
      * Adds a prebuild key  input  to the agent.
