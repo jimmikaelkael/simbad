@@ -109,6 +109,13 @@ public  abstract class BaseObject {
         rotation.mul(t3d);
         rotationGroup.setTransform(rotation);
     }
+   /** Rotates (relative to current rotation) the object about Z axis. */
+   public void rotateZ(double angle) {
+        Transform3D t3d = new Transform3D();
+        t3d.rotX(angle);
+        rotation.mul(t3d);
+        rotationGroup.setTransform(rotation);
+    }
    /** Resets translation and rotation transforms. */
    	void resetTransforms(){
         translation.setIdentity();
