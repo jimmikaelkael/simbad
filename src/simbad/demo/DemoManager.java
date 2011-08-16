@@ -37,7 +37,7 @@ public class DemoManager {
     // available demos classes
     final static String classNames[] = { "simbad.demo.BaseDemo","simbad.demo.BumpersDemo",
             "simbad.demo.SingleAvoiderDemo", "simbad.demo.AvoidersDemo",
-            "simbad.demo.ImagerDemo", "simbad.demo.LightSearchDemo",
+            "simbad.demo.ImagerDemo", "simbad.demo.LightSearchDemo", "simbad.demo.LineDemo",
             "simbad.demo.SimplestDemo", "simbad.demo.BlinkingLampDemo",
             "simbad.demo.DifferentialKinematicDemo","simbad.demo.KheperaDemo","simbad.demo.PickCherriesDemo",
             "simbad.demo.PushBallsDemo"};
