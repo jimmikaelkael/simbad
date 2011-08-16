@@ -214,13 +214,16 @@ public class PhysicalEngine {
             for (int j = 0; j < nobjs; j++) {
                 Object o = objects.get(j);
                 if (o instanceof StaticObject) {
-                    if (intersect(bs1, (StaticObject) o))
-                    {
-                        if (checkCollision) 
-                            a1.collisionDetected = true;
+                    // ensure the object can't be traversed
+                    if (!((StaticObject) o).getCanBeTraversed()) {
+                        if (intersect(bs1, (StaticObject) o))
+                        {
+                            if (checkCollision)
+                                a1.collisionDetected = true;
                         
-                        if (computeInteraction){
-                            computeAgentObjectImpact(a1,(StaticObject)o,bs1);
+                            if (computeInteraction){
+                                computeAgentObjectImpact(a1,(StaticObject)o,bs1);
+                            }
                         }
                     }
                 }
