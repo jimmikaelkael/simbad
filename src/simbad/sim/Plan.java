@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class Plan {
     Agent agent;
-    ArrayList actions;
+    ArrayList<Movement> actions;
     int state, count;
 
     private class Transition {
@@ -40,7 +40,7 @@ public class Plan {
 
     public Plan(Agent agent) {
         this.agent = agent;
-        actions = new ArrayList();
+        actions = new ArrayList<Movement>();
         state = 0;
         count = 0;
     }

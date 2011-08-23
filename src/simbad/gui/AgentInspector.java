@@ -49,9 +49,9 @@ public class AgentInspector extends JInternalFrame implements Runnable {
     private SimpleAgent agent;
     private JTextArea textArea;
     /** The list of all agent's sensor panels */
-    private ArrayList sensorPanels;
+    private ArrayList<JPanel> sensorPanels;
     /** The list of all agent's actuator panels */
-    private ArrayList actuatorPanels;
+    private ArrayList<JPanel> actuatorPanels;
     private Thread thread;
     float framesPerSecond;
     Font font;
@@ -61,8 +61,8 @@ public class AgentInspector extends JInternalFrame implements Runnable {
         this.agent = agent;
         this.simulator = simulator;
         agent.setAgentInspector(this);
-        sensorPanels = new ArrayList();
-        actuatorPanels = new ArrayList();
+        sensorPanels = new ArrayList<JPanel>();
+        actuatorPanels = new ArrayList<JPanel>();
         initialize();
         setFramesPerSecond(2.0f);
         if (useThread){

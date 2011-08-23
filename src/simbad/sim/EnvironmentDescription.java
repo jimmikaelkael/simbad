@@ -40,7 +40,7 @@ import java.util.ArrayList;
 public class EnvironmentDescription {
     
     
-    ArrayList objects;
+    ArrayList<Object> objects;
     
     public Color3f white, black, red, green, blue, ligthgray, gray, darkgray;
     // configurable values
@@ -71,7 +71,7 @@ public class EnvironmentDescription {
 
     public EnvironmentDescription() {
         worldSize = 20;
-        objects = new ArrayList();
+        objects = new ArrayList<Object>();
         white = new Color3f(1, 1, 1);
         black = new Color3f(0, 0, 0);
         green = new Color3f(0, 1, 0);

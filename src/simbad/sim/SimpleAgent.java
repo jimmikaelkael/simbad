@@ -54,9 +54,9 @@ public  class SimpleAgent extends BaseObject {
     /** Parent simulator. */
     private Simulator simulator;
      /** The agent's sensors */
-    private ArrayList sensors;
+    private ArrayList<SensorDevice> sensors;
     /** The agent's actuators */
-    private ArrayList actuators; 
+    private ArrayList<ActuatorDevice> actuators; 
     
     
      /** Bounds for collision detection */
@@ -135,8 +135,8 @@ public  class SimpleAgent extends BaseObject {
         this.name = name;
         super.create3D(true);
         startPosition = new Vector3d(pos);
-        sensors = new ArrayList();
-        actuators= new ArrayList();
+        sensors = new ArrayList<SensorDevice>();
+        actuators= new ArrayList<ActuatorDevice>();
        // interactingAgents = new ArrayList();
        
         // reserve collision detection stuff
