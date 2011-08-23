@@ -1,4 +1,4 @@
-/* author: Louis Hugues - created on 12 fvr. 2005  */
+/* author: Louis Hugues - created on 12 fevr. 2005  */
 package simbad.gui;
 
 

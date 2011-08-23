@@ -84,7 +84,7 @@ public class Console extends JInternalFrame implements Runnable {
                 {
                     byte buf[] = new byte[in.available()];
                     in.read(buf, 0, buf.length);
-                    // devrait être bloquant ?
+                    // devrait etre bloquant ?
                     String text = jtextArea.getText();
                     text += new String(buf);
                     int l = text.length();

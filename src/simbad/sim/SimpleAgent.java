@@ -245,7 +245,7 @@ public  class SimpleAgent extends BaseObject {
         v1.scale(dt);
         angularVelocity.add(v1);
      }
-    /** Perform velocities integration step .¬ */
+    /** Perform velocities integration step . */
     protected void integratesPositionChange(double dt){
        
         
