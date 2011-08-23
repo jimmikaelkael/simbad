@@ -1,4 +1,4 @@
-/* author: Louis Hugues - created on 12 févr. 2005  */
+/* author: Louis Hugues - created on 12 fevr. 2005  */
 package simbad.gui;
 
 import java.awt.BorderLayout;
@@ -42,7 +42,7 @@ public class Simbatch {
         frame.setSize(100, 100);
         frame.setVisible(true);
          if (!do3DRendering){
-           frame.hide();
+           frame.setVisible(false);
            // Do not render
            canvas3d.stopRenderer();
          }
