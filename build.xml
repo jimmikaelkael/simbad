@@ -31,7 +31,9 @@
   </target>
 
  <target name="contribs" depends="init"   description="compilation of contributed packages" >
-    <javac includeAntRuntime="false" srcdir="${src}/contribs" destdir="${build}"  /> 
+    <javac includeAntRuntime="false" srcdir="${src}/contribs" destdir="${build}">
+    <!--<compilerarg value="-Xlint:unchecked"/>-->
+    </javac> 
   </target>
 
  

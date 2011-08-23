@@ -64,7 +64,7 @@ public class MapLoaderDemo extends EnvironmentDescription {
 	// a goal to reach
 	public Point3d _goal = new Point3d();
 	// the initial starting points for robots (contains Point3d)
-	public ArrayList _startingPoints = new ArrayList();
+	public ArrayList<Point3d> _startingPoints = new ArrayList<Point3d>();
 	
 	
 	public MapLoaderDemo() 
