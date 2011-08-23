@@ -27,13 +27,13 @@ package simbad.sim;
 import javax.vecmath.Color3f;
 import javax.vecmath.Vector3d;
 /**
- *
+ *  A helper class to aid building specific environments.
  */
 public class WorldFactory extends Factory {
 
 	/** Sets a RoboSoccer terrain in the given environment.
 	 * 
-	 * @param environment to set.
+	 * @param wd : environment to set.
 	 */ 
 	static public void setRoboSoccerEnvironment(EnvironmentDescription wd) {
 

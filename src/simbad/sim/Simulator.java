@@ -332,7 +332,7 @@ public class Simulator {
     }
     /** Set the time factor. Used to increase or decrease the simulation rate.
      *  
-     * @param factor : typical value 1.0 (default) , 2.0 or 0.5
+     * @param fact : typical value 1.0 (default) , 2.0 or 0.5
      */
     public void setVirtualTimeFactor(float fact){
         System.out.println("[SIM] virtualTimeFactor = " + fact);

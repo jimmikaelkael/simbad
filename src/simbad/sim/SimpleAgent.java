@@ -408,7 +408,8 @@ public  class SimpleAgent extends BaseObject {
 	
 	/**
 	 * Go to given XZ position. Y coords is left unchanged.
-	 * @param position - the new position. 
+	 * @param x - the new x coords.
+	 * @param z - the new z coords. 
 	 */
 	public void  moveToPosition(double x, double z){
 	   
@@ -418,7 +419,6 @@ public  class SimpleAgent extends BaseObject {
 	
 	/**
 	 * Adds a sensor device to the agent.
-	 * @param num - the requested position in the sensor list.
 	 * @param sd - the device.
 	 * @param position - its position relative to agent's center.
 	 * @param angle - its angle in the XZ plane.
@@ -435,8 +435,7 @@ public  class SimpleAgent extends BaseObject {
 	}
 	/**
 	 * Adds a actuator device to the agent.
-	 * @param num - the requested position in the sensor list.
-	 * @param sd - the device.
+	 * @param ad - the device.
 	 * @param position - its position relative to agent's center.
 	 * @param angle - its angle in the XZ plane.
 	 * @return the num of the actuator
@@ -491,9 +490,8 @@ public  class SimpleAgent extends BaseObject {
      }
     
 	 /**
-	  * Return agents coordinates.
-	 * @return agent point3d .
-	 */
+	  * Get agents coordinates.
+	  */
 	public void getCoords(Point3d coord){
 	    Vector3d t = v1;
 	    translation.get(t);

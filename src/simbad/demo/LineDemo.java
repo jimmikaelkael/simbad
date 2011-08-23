@@ -23,8 +23,8 @@ package simbad.demo;
 
 import javax.vecmath.Vector3d;
 import simbad.sim.*;
-/** A Basic demo with camera sensor, sonars and bumpers.
- * The robot wanders and stops when it collides.
+/** A basic demo with a Line sensor.
+ * The robot follow the black line.
  *
  */
 public class LineDemo extends Demo {
