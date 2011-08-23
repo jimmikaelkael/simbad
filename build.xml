@@ -20,15 +20,18 @@
   </target>
 
   <target name="simbad" depends="init"   description="compilation of simbad package" >
-    <javac srcdir="${src}/simbad" destdir="${build}"/>
+    <javac includeAntRuntime="false" srcdir="${src}/simbad" destdir="${build}">
+    <!--<compilerarg value="-Xlint:deprecation"/>-->
+    <!--<compilerarg value="-Xlint:unchecked"/>-->
+    </javac>
   </target>
 
   <target name="examples" depends="init"   description="compilation of examples package" >
-    <javac srcdir="${src}/examples" destdir="${build}"/>
+    <javac includeAntRuntime="false" srcdir="${src}/examples" destdir="${build}"/>
   </target>
 
  <target name="contribs" depends="init"   description="compilation of contributed packages" >
-    <javac srcdir="${src}/contribs" destdir="${build}"  /> 
+    <javac includeAntRuntime="false" srcdir="${src}/contribs" destdir="${build}"  /> 
   </target>
 
  
