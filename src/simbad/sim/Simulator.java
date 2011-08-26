@@ -313,7 +313,7 @@ public class Simulator {
     }
 
 
-       public ArrayList getAgentList() {
+       public ArrayList<SimpleAgent> getAgentList() {
         return agents;
     }
     /** Sets use physics indicator.*/

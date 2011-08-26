@@ -469,8 +469,8 @@ public  class SimpleAgent extends BaseObject {
 
 	//////////////////////////////////////////////////////////////////////
     /// Get methods.
-    public ArrayList getSensorList(){ return sensors;}
-    public ArrayList getActuatorList(){ return actuators;}
+    public ArrayList<SensorDevice> getSensorList(){ return sensors;}
+    public ArrayList<ActuatorDevice> getActuatorList(){ return actuators;}
     
     /**
      * Returns the agent total lifetime since last reset (in seconds).

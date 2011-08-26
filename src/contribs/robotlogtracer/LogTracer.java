@@ -40,7 +40,7 @@ import javax.swing.JFrame;
  */
 public class LogTracer extends JFrame {
 
-
+	private static final long serialVersionUID = 1L;
 	private String _path = "log/trace-"+(System.currentTimeMillis()/1000);
 	
 	private String _type = "png";

@@ -56,7 +56,7 @@ public class DemoManager {
 
     /** Creates a demo corresponding to the menu item. */
        public static Demo getDemoFromActionEvent(ActionEvent event) {
-        Class cl = null;
+        Class<?> cl = null;
         Demo demo=null;
         String demoName = ((JMenuItem) event.getSource()).getText();
         try {

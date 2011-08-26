@@ -118,7 +118,7 @@ public  class World   {
     private void createUniverse(EnvironmentDescription ed) {
         System.out.println("create Universe");
         // show infos 
-        Map map  = VirtualUniverse.getProperties();
+        Map<?,?> map  = VirtualUniverse.getProperties();
         System.out.println("----------------------------------------");
         System.out.println("j3d.version = "+map.get("j3d.version"));
         System.out.println("j3d.vendor = "+map.get("j3d.vendor"));
@@ -202,7 +202,7 @@ public  class World   {
         canvas3d.setDoubleBufferEnable(true);
         
         // display j3d info
-        Map map = canvas3d.queryProperties();
+        Map<?,?> map = canvas3d.queryProperties();
         System.out.println("doubleBufferAvailable = "
                 + map.get("doubleBufferAvailable"));
         System.out.println("sceneAntialiasingNumPasses = "

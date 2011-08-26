@@ -81,7 +81,7 @@ public class AgentInspector extends JInternalFrame implements Runnable {
         // 
         
         // create sensor panels
-        ArrayList sensors = agent.getSensorList();
+        ArrayList<SensorDevice> sensors = agent.getSensorList();
         for (int i =0 ; i< sensors.size();i++){
             SensorDevice sd = (SensorDevice)sensors.get(i);
             if (sd == null) continue;
@@ -100,7 +100,7 @@ public class AgentInspector extends JInternalFrame implements Runnable {
             }
         }
         // create Actuators panels
-        ArrayList actuators = agent.getActuatorList();
+        ArrayList<ActuatorDevice> actuators = agent.getActuatorList();
         for (int i =0 ; i< actuators.size();i++){
             ActuatorDevice ad = (ActuatorDevice)actuators.get(i);
             if (ad == null) continue;
